@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Function to load the PDF in the page
+        function loadPDF(pdfUrl) {
+            const viewer = document.getElementById('pdf-viewer-container');
+            const frame = document.getElementById('pdf-frame');
+            
+            viewer.classList.remove('hidden');
+            frame.src = pdfUrl;
+            
+            // Smooth scroll to the PDF viewer
+            viewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Function to close the PDF viewer
+        function closePDF() {
+            const viewer = document.getElementById('pdf-viewer-container');
+            const frame = document.getElementById('pdf-frame');
+            
+            viewer.classList.add('hidden');
+            frame.src = '';
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <header class="max-w-5xl mx-auto px-6 py-12 text-center md:text-left border-b border-gray-200">
+        <h1 class="text-4xl font-bold text-gray-900 tracking-tight">Tudor Codrut Cristian BERTEANU</h1>
+        <p class="text-xl text-gray-600 mt-2">Chemical / Environmental Engineer & Developer</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Academic & Simulation Projects</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
+            
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <img src="logo-unstpb.png" alt="UNSTPB Logo" class="h-12 mb-4 object-contain">
+                    <h3 class="text-lg font-bold text-gray-900 leading-tight">Bachelor Thesis</h3>
+                    <p class="text-gray-500 text-sm mt-1 mb-4">National University of Science and Technology Politehnica Bucharest</p>
+                    <p class="text-gray-600 text-sm">Graduation thesis detailing core engineering research, methodology, and experimental results completed at UNSTPB.</p>
+                </div>
+                <div class="mt-6">
+                    <button onclick="loadPDF('bachelor-thesis-unstpb.pdf')" class="w-full text-center px-4 py-2 bg-indigo-50 text-indigo-700 font-medium rounded hover:bg-indigo-100 transition">
+                        Read Document &darr;
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <img src="logo-uclm.png" alt="UCLM Logo" class="h-12 mb-4 object-contain">
+                    <h3 class="text-lg font-bold text-gray-900 leading-tight">Adsorption Behaviour Modelling</h3>
+                    <p class="text-gray-500 text-sm mt-1 mb-4">Universidad de Castilla-La Mancha</p>
+                    <p class="text-gray-600 text-sm">A Python-based simulation framework engineered to model, compute, and plot fluid-solid adsorption isotherms and kinetic profiles.</p>
+                </div>
+                <div class="mt-6">
+                    <button onclick="loadPDF('adsorption-modelling.pdf')" class="w-full text-center px-4 py-2 bg-indigo-50 text-indigo-700 font-medium rounded hover:bg-indigo-100 transition">
+                        Read Document &darr;
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <img src="logo-wust.png" alt="WUST Logo" class="h-12 mb-4 object-contain">
+                    <h3 class="text-lg font-bold text-gray-900 leading-tight">Statistics using Statistica</h3>
+                    <p class="text-gray-500 text-sm mt-1 mb-4">Wrocław University of Science and Technology</p>
+                    <p class="text-gray-600 text-sm">Comprehensive statistical analysis utilizing Statistica software for advanced data modeling and evaluation.</p>
+                </div>
+                <div class="mt-6">
+                    <button onclick="loadPDF('statistics-wust.pdf')" class="w-full text-center px-4 py-2 bg-indigo-50 text-indigo-700 font-medium rounded hover:bg-indigo-100 transition">
+                        Read Document &darr;
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <img src="logo-uclm.png" alt="UCLM Logo" class="h-12 mb-4 object-contain">
+                    <h3 class="text-lg font-bold text-gray-900 leading-tight">Methanol from Biogas Simulation</h3>
+                    <p class="text-gray-500 text-sm mt-1 mb-4">Universidad de Castilla-La Mancha</p>
+                    <p class="text-gray-600 text-sm">Process simulation of methanol production from biogas using UniSim and ProSim modeling frameworks in Spain.</p>
+                </div>
+                <div class="mt-6">
+                    <button onclick="loadPDF('methanol-biogas-uclm.pdf')" class="w-full text-center px-4 py-2 bg-indigo-50 text-indigo-700 font-medium rounded hover:bg-indigo-100 transition">
+                        Read Document &darr;
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 border-t border-gray-200 pt-10">Python Web Applications</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
+            
+            <div class="bg-gray-900 p-6 rounded-lg shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Biomass Refinery Simulator</h3>
+                    <p class="text-gray-400 mt-2 text-sm">An interactive Streamlit application for simulating biomass refining processes and structural outputs.</p>
+                </div>
+                <div class="mt-6">
+                    <a href="https://biorefinery-simulator.streamlit.app/" target="_blank" class="inline-flex items-center text-sm font-medium text-emerald-400 hover:text-emerald-300">
+                        Launch Application <span class="ml-2">&nearr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-white">Chemical Safety Tool</h3>
+                    <p class="text-gray-400 mt-2 text-sm">A Streamlit dashboard built for evaluating, tracking, and managing complex chemical process safety parameters.</p>
+                </div>
+                <div class="mt-6">
+                    <a href="https://chemicalsafety.streamlit.app/" target="_blank" class="inline-flex items-center text-sm font-medium text-emerald-400 hover:text-emerald-300">
+                        Launch Application <span class="ml-2">&nearr;</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="pdf-viewer-container" class="hidden mt-12 border-t border-gray-200 pt-8">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-gray-900">Document Viewer</h3>
+                <button onclick="closePDF()" class="px-4 py-2 bg-red-100 text-red-700 rounded hover:bg-red-200 text-sm font-bold transition">
+                    Close Document X
+                </button>
+            </div>
+            <div class="w-full h-screen border-2 border-gray-300 rounded-lg overflow-hidden shadow-inner">
+                <iframe id="pdf-frame" src="" class="w-full h-full" frameborder="0"></iframe>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
