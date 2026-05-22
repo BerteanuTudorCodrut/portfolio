@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Function to load the PDF in the page
@@ -31,23 +30,18 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
-    <!-- Header -->
     <header class="max-w-5xl mx-auto px-6 py-12 text-center md:text-left border-b border-gray-200">
         <h1 class="text-4xl font-bold text-gray-900 tracking-tight">Tudor Codrut Cristian BERTEANU</h1>
-        <p class="text-xl text-gray-600 mt-2">Chemical/ Enviromental Engineer & Developer</p>
+        <p class="text-xl text-gray-600 mt-2">Chemical / Environmental Engineer & Developer</p>
     </header>
 
-    <!-- Main Content -->
     <main class="max-w-5xl mx-auto px-6 py-12">
         
-        <!-- SECTION 1: Academic & Simulation Projects (PDFs) -->
         <h2 class="text-2xl font-bold text-gray-900 mb-6">Academic & Simulation Projects</h2>
         <div class="grid md:grid-cols-2 gap-6 mb-16">
             
-            <!-- Project 1: UNSTPB Bachelor Thesis (In Romanian) -->
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between hover:shadow-md transition">
                 <div>
-                    <!-- Local University Logo -->
                     <img src="logo-unstpb.png" alt="UNSTPB Logo" class="h-12 mb-4 object-contain">
                     <h3 class="text-lg font-bold text-gray-900 leading-tight">Bachelor Thesis</h3>
                     <p class="text-gray-500 text-sm mt-1 mb-4">National University of Science and Technology Politehnica Bucharest</p>
@@ -60,10 +54,24 @@
                 </div>
             </div>
 
-            <!-- Project 2: WUST -->
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between hover:shadow-md transition">
                 <div>
-                    <!-- Local University Logo -->
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="bg-slate-800 text-white font-bold text-[10px] px-2.5 py-1 rounded tracking-wider uppercase">Python Modelling</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 leading-tight">Adsorption Behaviour Modelling</h3>
+                    <p class="text-gray-500 text-sm mt-1 mb-4">Research & Simulation Report</p>
+                    <p class="text-gray-600 text-sm">A Python-based simulation framework engineered to model, compute, and plot fluid-solid adsorption isotherms and kinetic profiles.</p>
+                </div>
+                <div class="mt-6">
+                    <button onclick="loadPDF('adsorption-modelling.pdf')" class="w-full text-center px-4 py-2 bg-indigo-50 text-indigo-700 font-medium rounded hover:bg-indigo-100 transition">
+                        Read Document &darr;
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between hover:shadow-md transition">
+                <div>
                     <img src="logo-wust.png" alt="WUST Logo" class="h-12 mb-4 object-contain">
                     <h3 class="text-lg font-bold text-gray-900 leading-tight">Statistics using Statistica</h3>
                     <p class="text-gray-500 text-sm mt-1 mb-4">Wrocław University of Science and Technology</p>
@@ -76,10 +84,8 @@
                 </div>
             </div>
 
-            <!-- Project 3: UCLM UniSim -->
             <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between hover:shadow-md transition">
                 <div>
-                    <!-- Local University Logo -->
                     <img src="logo-uclm.png" alt="UCLM Logo" class="h-12 mb-4 object-contain">
                     <h3 class="text-lg font-bold text-gray-900 leading-tight">Methanol from Biogas Simulation</h3>
                     <p class="text-gray-500 text-sm mt-1 mb-4">Universidad de Castilla-La Mancha</p>
@@ -92,29 +98,11 @@
                 </div>
             </div>
 
-            <!-- Project 4: UCLM ERC -->
-            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between hover:shadow-md transition">
-                <div>
-                    <!-- Local University Logo -->
-                    <img src="logo-uclm.png" alt="UCLM Logo" class="h-12 mb-4 object-contain">
-                    <h3 class="text-lg font-bold text-gray-900 leading-tight">ERC Research Proposal</h3>
-                    <p class="text-gray-500 text-sm mt-1 mb-4">Universidad de Castilla-La Mancha</p>
-                    <p class="text-gray-600 text-sm">Formal European Research Council (ERC) proposal detailing methodology, execution strategies, and project impact.</p>
-                </div>
-                <div class="mt-6">
-                    <button onclick="loadPDF('erc-proposal-uclm.pdf')" class="w-full text-center px-4 py-2 bg-indigo-50 text-indigo-700 font-medium rounded hover:bg-indigo-100 transition">
-                        Read Document &darr;
-                    </button>
-                </div>
-            </div>
-
         </div>
 
-        <!-- SECTION 2: Python Web Apps -->
         <h2 class="text-2xl font-bold text-gray-900 mb-6 border-t border-gray-200 pt-10">Python Web Applications</h2>
         <div class="grid md:grid-cols-2 gap-6 mb-16">
             
-            <!-- Python App 1 -->
             <div class="bg-gray-900 p-6 rounded-lg shadow-sm flex flex-col justify-between">
                 <div>
                     <h3 class="text-xl font-bold text-white">Biomass Refinery Simulator</h3>
@@ -127,7 +115,6 @@
                 </div>
             </div>
 
-            <!-- Python App 2 -->
             <div class="bg-gray-900 p-6 rounded-lg shadow-sm flex flex-col justify-between">
                 <div>
                     <h3 class="text-xl font-bold text-white">Chemical Safety Tool</h3>
@@ -142,7 +129,6 @@
 
         </div>
 
-        <!-- IN-PAGE PDF VIEWER (Hidden by default) -->
         <div id="pdf-viewer-container" class="hidden mt-12 border-t border-gray-200 pt-8">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-xl font-bold text-gray-900">Document Viewer</h3>
